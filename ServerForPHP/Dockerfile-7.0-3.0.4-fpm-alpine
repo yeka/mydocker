@@ -1,0 +1,7 @@
+FROM php:7.0-fpm-alpine
+MAINTAINER Yakub Kristianto <yakub1986@gmail.com>
+
+COPY phalcon-3.0.4.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012
+
+RUN echo "extension=phalcon-3.0.4.so" > /usr/local/etc/php/conf.d/phalcon.ini
+
